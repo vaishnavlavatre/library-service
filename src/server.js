@@ -2,6 +2,7 @@ const app = require('./app');
 const {sequelize,createSchemas } = require('./config/db');
 const { User, Role } = require('./models/user'); // Fixed 
 const Book = require('./models/book'); // Import Book model
+const Borrow = require('./models/borrow');
 
 const PORT = process.env.PORT || 3000;
 console.log('count: %d' , PORT)

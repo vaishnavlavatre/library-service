@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { User, Book, Borrow } = require('../models');
+const { User, Role } = require('../models/user'); // Correct import
+const Book = require('../models/book');
+const Borrow = require('../models/borrow');
 
 // Borrow a book (user_id passed explicitly)
 router.post('/borrow', async (req, res) => {
+  console.log("testing ")
   const { user_id, book_id } = req.body;
 
   try {
